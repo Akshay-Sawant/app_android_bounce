@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.main.MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChartMain"
+            android:layout_width="@dimen/material_dimen_constraint"
+            android:layout_height="@dimen/material_dimen_constraint"
+            android:layout_marginBottom="@dimen/material_dimen_mdpi"
+            android:padding="@dimen/material_dimen_mdpi"
+            app:layout_constraintBottom_toTopOf="@+id/textViewMainSeekCount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/seekBarMain"
+            android:layout_width="@dimen/material_dimen_constraint"
+            android:layout_height="wrap_content"
+            android:max="50"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewMainSeekCount"
+            app:layout_constraintEnd_toStartOf="@+id/textViewMainSeekCount"
+            app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@+id/textViewMainSeekCount" />
+
+        <TextView
+            android:id="@+id/textViewMainSeekCount"
+            android:layout_width="@dimen/material_dimen_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/material_dimen_mdpi"
+            android:gravity="center"
+            android:hint="@string/text_hint_count"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            app:layout_constraintBottom_toTopOf="@+id/textViewMainBounceCount"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd" />
+
+        <TextView
+            android:id="@+id/textViewMainBounceCount"
+            android:layout_width="@dimen/material_dimen_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/material_dimen_mdpi"
+            android:gravity="center"
+            android:hint="@string/text_hint_count"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            app:layout_constraintBottom_toTopOf="@+id/textViewMainBounceCountLabel"
+            app:layout_constraintEnd_toEndOf="@+id/textViewMainBounceCountLabel"
+            app:layout_constraintStart_toStartOf="@+id/textViewMainBounceCountLabel" />
+
+        <TextView
+            android:id="@+id/textViewMainBounceCountLabel"
+            android:layout_width="@dimen/material_dimen_constraint"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/text_label_bounce_count"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+            app:layout_constraintEnd_toStartOf="@+id/textViewMainBounceTimeLabel"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart" />
+
+        <TextView
+            android:id="@+id/textViewMainBounceTime"
+            android:layout_width="@dimen/material_dimen_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_dimen_mdpi"
+            android:layout_marginBottom="@dimen/material_dimen_mdpi"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:hint="@string/text_hint_count"
+            android:maxLines="1"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            app:layout_constraintBottom_toTopOf="@+id/textViewMainBounceTimeLabel"
+            app:layout_constraintEnd_toEndOf="@+id/textViewMainBounceTimeLabel"
+            app:layout_constraintStart_toStartOf="@+id/textViewMainBounceTimeLabel" />
+
+        <TextView
+            android:id="@+id/textViewMainBounceTimeLabel"
+            android:layout_width="@dimen/material_dimen_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_dimen_mdpi"
+            android:gravity="center"
+            android:text="@string/text_label_bounce_time"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewMainBounceCountLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewMainBounceCountLabel"
+            app:layout_constraintTop_toTopOf="@+id/textViewMainBounceCountLabel" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/material_dimen_mdpi" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/material_dimen_mdpi" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/material_dimen_mdpi" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/material_dimen_mdpi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bounce</string>
+
+    //Main
+    <string name="text_hint_time">Bounce Time</string>
+    <string name="text_hint_count">0</string>
+    <string name="text_label_bounce_time">Bounce Time</string>
+    <string name="text_label_bounce_count">Bounce Count</string>
+</resources>
